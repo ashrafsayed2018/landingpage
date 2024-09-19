@@ -1095,6 +1095,10 @@ video {
     height: 400px;
   }
 
+  .md\:h-\[450px\] {
+    height: 450px;
+  }
+
   .md\:w-\[500px\] {
     width: 500px;
   }
