@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" class="scroll-smooth focus:scroll-auto">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-      
+
       body {
         background-color: #f5f5f5; /* Light green background */
         color: #1e3a8a; /* Navy text */
@@ -68,7 +68,8 @@
   </head>
   <body dir="rtl">
     <!-- Navbar -->
-    <nav class="shadow-md">
+    <div id="scrollProgress" class="fixed top-0 left-0 right-0 z-50"></div>
+    <nav class="shadow-md" id="top">
       <div class="container mx-auto flex justify-between items-center p-4">
         <div class="text-xl font-bold text-white">الشاهين</div>
         <div>
@@ -473,5 +474,24 @@
         </div>
       </div>
     </footer>
+        <!-- Scroll to Top Button -->
+        <a href="#top" class="w-12 h-12 text-center fixed  bottom-4 left-4 bg-blue-500 text-white p-3 rounded-full shadow-lg transition-opacity duration-300 opacity-100 hover:bg-blue-600">
+            ↑
+        </a>
+
+        
+        <script>
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.scrollY;
+                const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercentage = Math.min(Math.round((scrollTop / documentHeight) * 100), 100);
+                
+                // Set the border width based on the scroll percentage
+                const scrollButton = document.getElementById('scrollProgress');
+                scrollButton.style.width = `${scrollPercentage}%`;
+                scrollButton.style.height = '10px';
+                scrollButton.style.backgroundColor = 'red';
+            });
+        </script>
   </body>
 </html>
