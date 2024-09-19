@@ -735,6 +735,10 @@ video {
   height: 400px;
 }
 
+.h-\[300px\] {
+  height: 300px;
+}
+
 .w-12 {
   width: 3rem;
 }
@@ -769,6 +773,10 @@ video {
 
 .w-\[500px\] {
   width: 500px;
+}
+
+.w-\[400px\] {
+  width: 400px;
 }
 
 .max-w-lg {
@@ -1081,6 +1089,14 @@ video {
 @media (min-width: 768px) {
   .md\:mt-0 {
     margin-top: 0px;
+  }
+
+  .md\:h-\[400px\] {
+    height: 400px;
+  }
+
+  .md\:w-\[500px\] {
+    width: 500px;
   }
 }
 
