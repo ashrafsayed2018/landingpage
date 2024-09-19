@@ -37,20 +37,14 @@
     <title>مكافحة الآفات النظيفة - خدمات مكافحة الآفات في الكويت</title>
     <script src="//unpkg.com/alpinejs" defer></script>
     <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <!-- Include Material Icons Library -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+   
 
     <link rel="preload" as="image" href="https://via.placeholder.com/500x400">
+
+    <link rel="stylesheet" href="style.css">
 
     <style>
       @font-face {
@@ -106,16 +100,16 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="py-16" id="hero">
-      <div class="container mx-auto flex flex-col lg:flex-row items-center">
-        <div class="lg:w-1/2 lg:mt-0">
+    <section class="pb-16 lg:py-16" id="hero">
+      <div class="container lg:w-full mx-auto flex flex-col lg:flex-row items-center h-[60rem] lg:h-[26rem]">
+        <div class="lg:w-1/2 lg:mt-0 w-full h-[30rem] lg:h-full">
           <img
             src="https://via.placeholder.com/500x400"
             alt="صورة مكافحة الآفات"
-            class="rounded-lg shadow-lg"
+            class="w-full h-full object-cover"
           />
         </div>
-        <div class="lg:w-1/2 text-center lg:text-right mt-8">
+        <div class="lg:w-1/2 text-center lg:text-right mt-8 md:mt-0 flex flex-col justify-around p-4 h-[30rem] lg:h-full">
           <h1 class="text-4xl font-bold">
             الشاهين لمكافحة الحشرات والقوارض في الكويت
           </h1>
@@ -146,16 +140,16 @@
     <main class="px-6">
       <!-- About Us Section -->
       <section class="py-16" id="about">
-        <div class="container mx-auto flex flex-col lg:flex-row items-center">
-          <div class="lg:w-1/2">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center  h-[60rem] lg:h-[26rem]">
+          <div class="lg:w-1/2 w-full h-[30rem] lg:h-full">
             <img
               src="https://via.placeholder.com/500x400"
               alt="صورة من نحن"
-              class="rounded-lg shadow-lg"
+              class="rounded-lg shadow-lg w-full h-full"
             />
           </div>
-          <div class="lg:w-1/2 mt-8 lg:mt-0 text-right">
-            <h2 class="text-3xl font-bold">من نحن</h2>
+          <div class="lg:w-1/2 mt-8 lg:mt-0 text-right w-full h-[30rem] lg:h-full p-4">
+            <h2 class="text-3xl font-bold text-center">من نحن</h2>
             <p class="mt-4 text-xl leading-loose">
               نحن شركة متخصصة في مكافحة الحشرات والقوارض في الكويت، نقدم حلولًا
               شاملة وفعالة للتخلص من مختلف أنواع الآفات التي تهدد صحة وسلامة
@@ -297,7 +291,10 @@
           href="tel:+123456789"
           class="bg-white text-blue-500 p-3 rounded-full shadow-lg flex items-center justify-center hover:bg-blue-100 transition duration-300"
         >
-          <span class="material-icons">call</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+            <path fill-rule="evenodd" d="m3.855 7.286 1.067-.534a1 1 0 0 0 .542-1.046l-.44-2.858A1 1 0 0 0 4.036 2H3a1 1 0 0 0-1 1v2c0 .709.082 1.4.238 2.062a9.012 9.012 0 0 0 6.7 6.7A9.024 9.024 0 0 0 11 14h2a1 1 0 0 0 1-1v-1.036a1 1 0 0 0-.848-.988l-2.858-.44a1 1 0 0 0-1.046.542l-.534 1.067a7.52 7.52 0 0 1-4.86-4.859Z" clip-rule="evenodd" />
+        </svg>
+          
         </a>
         <a
           href="https://wa.me/123456789"
@@ -339,7 +336,7 @@
         <a
           href="https://facebook.com"
           target="_blank"
-          class="bg-white text-green-500 p-3 rounded-full shadow-lg flex items-center justify-center hover:bg-green-100 transition duration-300"
+          class="bg-white text-blue-500 p-3 rounded-full shadow-lg flex items-center justify-center hover:bg-blue-100 transition duration-300"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -361,7 +358,7 @@
         <a
           href="https://twitter.com"
           target="_blank"
-          class="bg-white text-green-500 p-3 rounded-full shadow-lg flex items-center justify-center hover:bg-green-100 transition duration-300"
+          class="bg-white text-blue-500 p-3 rounded-full shadow-lg flex items-center justify-center hover:bg-blue-100 transition duration-300"
         >
           <svg viewBox="328 355 335 276" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -389,7 +386,7 @@
         <a
           href="https://instagram.com"
           target="_blank"
-          class="bg-white text-green-500 p-3 rounded-full shadow-lg flex items-center justify-center hover:bg-green-100 transition duration-300"
+          class="bg-white text-purple-500 p-3 rounded-full shadow-lg flex items-center justify-center hover:bg-purple-100 transition duration-300"
         >
           <svg
             id="instagram"
@@ -429,8 +426,20 @@
         @click="open = !open"
         class="bg-green-500 text-white p-3 rounded-full shadow-lg focus:outline-none transition-transform transform hover:scale-105 w-12 h-12 flex items-center justify-center"
       >
-        <span class="material-icons" x-show="!open">add</span>
-        <span class="material-icons" x-show="open">close</span>
+      <svg 
+        x-show="!open" 
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+        <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+      </svg>
+      
+      
+      <svg 
+        x-show="open"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+        <path d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z" />
+      </svg>
+      
+      
       </button>
     </section>
 
