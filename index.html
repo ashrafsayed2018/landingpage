@@ -86,16 +86,21 @@
 
     <!-- Hero Section -->
     <section class="pb-16 lg:py-16" id="hero">
-      <div class="container lg:w-full mx-auto flex flex-col lg:flex-row items-center h-[60rem] lg:h-[26rem]">
-        <div class="lg:w-1/2 lg:mt-0 w-full h-[30rem] lg:h-full">
-          <img
-            src="https://via.placeholder.com/500x400"
-            alt="صورة مكافحة الآفات"
-            class="w-[400px] h-[300px] md:w-[500px] md:h-[400px] object-cover"
-          />
+      <div class="container lg:w-full mx-auto flex flex-col lg:flex-row items-center h-[50rem] lg:h-[26rem]">
+        <div class="lg:w-1/2 lg:mt-0 w-full sm:h-[20rem] md:h-[40rem] lg:h-full bg-green-600 md:bg-blue-600 lg:bg-yellow">
+            <picture>
+                <!-- Mobile version -->
+                <source media="(max-width: 640px)" srcset="/images/hero-mobile-image.jpeg">
+                
+                <!-- Tablet version -->
+                <source media="(min-width: 641px) and (max-width: 1024px)" srcset="/images/hero-tablet-image.jpeg">
+                
+                <!-- Desktop version (default) -->
+                <img src="/images/hero-desktop-image.jpeg" alt="Description of the image" loading="lazy">
+            </picture>
         </div>
         <div class="lg:w-1/2 text-center lg:text-right mt-8 md:mt-0 flex flex-col justify-around p-4 h-[30rem] lg:h-full">
-          <h1 class="text:xl lg:text-4xl font-bold">
+          <h1 class="text:xl md:text-2xl/12 lg:text-4xl font-bold" style="line-height: 3.5rem;">
             الشاهين لمكافحة الحشرات والقوارض في الكويت
           </h1>
           <p class="mt-4 text-xl leading-loose">
@@ -103,7 +108,7 @@
             الفئران، والنمل الأبيض. نتميز باستخدام مواد آمنة وذات جودة عالية
             لضمان حماية منزلك أو عملك من الحشرات الضارة مع الحفاظ على البيئة.
           </p>
-          <div class="mt-6 flex items-center">
+          <div class="mt-6 flex items-center justify-center">
             <a
               href="tel:96565594848"
               class="w-30 flex items-center justify-center gap-4 p-3 text-white rounded-lg ml-4 bg-blue-500 hover:bg-blue-600 font-bold"
